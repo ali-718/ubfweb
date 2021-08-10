@@ -1,0 +1,16 @@
+.smallBox {
+  width: 6rem;
+  height: 2.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+
+  p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+  }
+}

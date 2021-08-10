@@ -1,0 +1,141 @@
+:root {
+  --header-width: 75rem;
+}
+
+.box {
+  width: var(--header-width);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  z-index: 99;
+
+  @media (max-width: 1400px) {
+    width: 90%;
+  }
+}
+
+.leftSide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--FONT-FAMILY);
+}
+
+.rightSide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--FONT-FAMILY);
+
+  @media (max-width: 800px) {
+    display: none;
+  }
+}
+
+.menuBoxWithBorder {
+  border-right: 2px solid var(--MENU-BORDER);
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 1rem;
+  margin-left: 1rem;
+
+  p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--MENU-COLOR);
+    text-transform: uppercase;
+    cursor: pointer;
+
+    @media (max-width: 1200px) {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+.dropDownMenuIcon {
+  display: none;
+
+  @media (max-width: 800px) {
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.menuIcon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.menuBox {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 1rem;
+  margin-left: 1rem;
+
+  p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--MENU-COLOR);
+    text-transform: uppercase;
+    cursor: pointer;
+
+    @media (max-width: 1200px) {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+.dropDownMenuItem {
+  height: 2rem;
+  width: 90%;
+  margin-top: 1rem;
+
+  p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--MENU-COLOR);
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}
+
+.menuButtonBox {
+  margin-left: 1rem;
+}
+
+.button {
+  background-color: var(--BUTTON-COLOR);
+
+  @media (max-width: 1200px) {
+    font-size: 0.7rem !important;
+  }
+}
+
+.menuDropdownButton {
+  background-color: var(--BUTTON-COLOR);
+  width: 100% !important;
+
+  p {
+    color: white;
+  }
+}
+
+.dropDownMenuBox {
+  position: absolute;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  top: 6rem;
+  z-index: 99;
+  height: 18rem;
+}
