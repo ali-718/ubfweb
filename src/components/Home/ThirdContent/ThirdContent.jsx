@@ -127,12 +127,13 @@ export const ThirdContent = () => {
             className={styles.facilityIconBackground}
           />
           <p className={styles.facilityHeading}>
-            Make a donation <br /> and save lives
+            Become our partner
+            <br /> and save money
           </p>
           <p className={styles.facilitySubText}>
-            Make a donation today and help someone get a warm plate of food
-            immediately. When you make a donation see how your money is spent
-            through our dashboard.
+            Be one of the restaurants that will provide people with a warm plate
+            of food. We will pay for your waste food and you will save from your
+            tax benefits.
           </p>
           <SmallButton text={"Learn how"} classname={styles.button} />
         </div>
@@ -144,12 +145,13 @@ export const ThirdContent = () => {
             className={styles.facilityIconBackground}
           />
           <p className={styles.facilityHeading}>
-            Make a donation <br /> and save lives
+            Spread the word
+            <br /> it’s good karma
           </p>
           <p className={styles.facilitySubText}>
-            Make a donation today and help someone get a warm plate of food
-            immediately. When you make a donation see how your money is spent
-            through our dashboard.
+            Let people know what we do. Spread the word of how transparent and
+            direct we are. You will help families have a nice warm nutritius
+            meal.
           </p>
           <SmallButton text={"Learn how"} classname={styles.button} />
         </div>
@@ -259,8 +261,11 @@ export const ThirdContent = () => {
           </div>
         </div>
 
-        <img src={distribution} className={styles.thirdContentImageTwo} />
+        <img src={distribution} className={styles.thirdContentImageThree} />
       </div>
+      <br />
+      <br />
+      <br />
     </div>
   );
 };
