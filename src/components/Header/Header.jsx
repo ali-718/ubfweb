@@ -5,8 +5,9 @@ import logoText from "../../assets/logoText.svg";
 import menuIcon from "../../assets/menuIcon.png";
 import { SmallButton } from "../Buttons/SmallButton";
 import { useWindowSize } from "../../hooks/useWindowize";
+import { withRouter } from "react-router-dom";
 
-export const Header = () => {
+export const Header = withRouter((props) => {
   const [isOpen, setIsOpen] = useState(false);
   const { width } = useWindowSize();
 
@@ -52,7 +53,11 @@ export const Header = () => {
           </div>
 
           <div className={styles.menuButtonBox}>
-            <SmallButton text={"Donate"} classname={styles.button} />
+            <SmallButton
+              onClick={() => props.history.push("/donate")}
+              text={"Donate"}
+              classname={styles.button}
+            />
           </div>
         </div>
       </div>
@@ -72,6 +77,7 @@ export const Header = () => {
           </div>
           <div className={styles.dropDownMenuItem}>
             <SmallButton
+              onClick={() => props.history.push("/donate")}
               text={"Donate"}
               classname={styles.menuDropdownButton}
             />
@@ -80,4 +86,4 @@ export const Header = () => {
       )}
     </>
   );
-};
+});

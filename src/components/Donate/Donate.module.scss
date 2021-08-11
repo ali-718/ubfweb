@@ -1,0 +1,380 @@
+.box {
+  width: 100%;
+  background-image: url("../../assets/donateBackground.svg");
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 70rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @media (max-width: 1300px) {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  @media (max-width: 1050px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: 600px) {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+.leftBox {
+  width: 33rem;
+  background-color: white;
+  border-radius: 0.3125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+
+  @media (max-width: 1300px) {
+    width: 30rem;
+  }
+
+  @media (max-width: 1050px) {
+    width: 25rem;
+  }
+
+  @media (max-width: 950px) {
+    width: 100%;
+  }
+}
+
+.contentBox {
+  width: 90%;
+}
+
+.selectorBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leftUnselected {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  border: 1px solid black;
+  border-top-left-radius: 0.3125rem;
+  border-bottom-left-radius: 0.3125rem;
+  cursor: pointer;
+
+  p {
+    color: black;
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+}
+
+.leftSelected {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  background-color: black;
+  border-top-left-radius: 0.3125rem;
+  border-bottom-left-radius: 0.3125rem;
+  border: 1px solid black;
+  cursor: pointer;
+
+  p {
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+}
+
+.rightUnselected {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  border: 1px solid black;
+  border-top-right-radius: 0.3125rem;
+  border-bottom-right-radius: 0.3125rem;
+  cursor: pointer;
+
+  p {
+    color: black;
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+}
+
+.rightSelected {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  background-color: black;
+  border-top-right-radius: 0.3125rem;
+  border-bottom-right-radius: 0.3125rem;
+  border: 1px solid black;
+  cursor: pointer;
+
+  p {
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+}
+
+.amountBox {
+  width: 100%;
+  border: 2px solid var(--GRAY-COLOR);
+  border-radius: 0.3125rem;
+  margin-top: 1.5rem;
+}
+
+.amountHeadingBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid var(--GRAY-COLOR);
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+
+  p {
+    font-size: 1rem;
+    color: black;
+    font-weight: bold;
+  }
+}
+
+.priceBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  flex-direction: column;
+}
+
+.priceGrid1 {
+  display: flex;
+  width: 85%;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.priceBoxUnselected {
+  background-color: var(--PRICE-BACKGROUND);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  margin-left: 0.3125rem;
+  flex: 1;
+
+  p {
+    font-size: 0.8rem;
+    color: var(--GRAY-COLOR);
+    font-weight: 400;
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
+    margin-top: 0.625rem;
+    margin-left: 0rem;
+  }
+}
+
+.priceBoxSelected {
+  background-color: var(--PRIMARY-COLOR);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  margin-left: 0.3125rem;
+  flex: 1;
+
+  p {
+    font-size: 0.8rem;
+    color: white;
+    font-weight: 400;
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
+    margin-top: 0.625rem;
+    margin-left: 0rem;
+  }
+}
+
+.priceBoxUnselectedLarge {
+  background-color: var(--PRICE-BACKGROUND);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  flex: 1;
+  margin-left: 0.3125rem;
+
+  p {
+    font-size: 0.8rem;
+    color: var(--GRAY-COLOR);
+    font-weight: 400;
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
+    margin-top: 0.625rem;
+    margin-left: 0rem;
+  }
+}
+
+.priceBoxSelectedLarge {
+  background-color: var(--PRIMARY-COLOR);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  flex: 1;
+  margin-left: 0.3125rem;
+
+  p {
+    font-size: 0.8rem;
+    color: white;
+    font-weight: 400;
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
+    margin-top: 0.625rem;
+    margin-left: 0rem;
+  }
+}
+
+.priceGrid2 {
+  display: flex;
+  margin-top: 0.3125rem;
+  width: 85%;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.sliderHeading {
+  width: 85%;
+  p {
+    font-size: 1.125rem;
+    color: black;
+    font-weight: 400;
+    margin-top: 2rem;
+  }
+}
+
+.sliderValue {
+  color: white !important;
+  font-size: 0.625rem !important;
+  margin-top: 0rem !important;
+}
+
+.sliderLabelBox {
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -2.1rem;
+  display: flex;
+
+  p {
+    font-size: 0.9rem;
+    color: var(--PRIMARY-COLOR);
+    font-weight: 400;
+  }
+}
+
+.button {
+  width: 100%;
+  background-color: var(--BUTTON-COLOR);
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+  }
+}
+
+// rightBox
+
+.rightBox {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  flex-direction: column;
+
+  p {
+    font-size: 1.6rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  span {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    margin-top: 1rem;
+    width: 70%;
+    line-height: 1.5rem;
+  }
+
+  @media (max-width: 600px) {
+    margin-left: 0rem;
+  }
+}
