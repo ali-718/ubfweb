@@ -165,6 +165,13 @@
     color: black;
     font-weight: bold;
   }
+
+  span {
+    font-size: 1rem;
+    color: var(--PRIMARY-COLOR);
+    font-weight: bold;
+    cursor: pointer;
+  }
 }
 
 .priceBox {
@@ -173,6 +180,16 @@
   align-items: center;
   justify-content: center;
   padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  flex-direction: column;
+}
+
+.modeBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0rem;
   padding-bottom: 1.5rem;
   flex-direction: column;
 }
@@ -186,6 +203,11 @@
     align-items: center;
     justify-content: center;
   }
+}
+
+.modeHeadingBox {
+  display: flex;
+  width: 85%;
 }
 
 .priceBoxUnselected {
@@ -300,6 +322,18 @@
   }
 }
 
+.modeGrid2 {
+  display: flex;
+  margin-top: 1rem;
+  width: 85%;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 .sliderHeading {
   width: 85%;
   p {
@@ -375,6 +409,153 @@
   }
 
   @media (max-width: 600px) {
+    margin-left: 0rem;
+  }
+}
+
+.modeSelected {
+  background-color: transparent;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex: 1;
+  border-bottom: 3px solid black;
+
+  p {
+    font-size: 0.8rem;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
+    margin-top: 0.625rem;
+    margin-left: 0rem;
+  }
+}
+
+.modeUnSelected {
+  background-color: transparent;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex: 1;
+  border-bottom: 3px solid var(--GRAY-COLOR);
+
+  p {
+    font-size: 0.8rem;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
+    margin-top: 0.625rem;
+    margin-left: 0rem;
+  }
+}
+
+.inputName {
+  padding: 1rem;
+  border: 0.5px solid var(--GRAY-COLOR);
+  flex: 1;
+  min-width: 1rem;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
+}
+
+.inputSecondName {
+  padding: 1rem;
+  border: 0.5px solid var(--GRAY-COLOR);
+  flex: 1;
+  border-left: none;
+  min-width: 1rem;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+    border-left: 0.5px solid var(--GRAY-COLOR);
+    margin-top: 1rem;
+  }
+}
+
+.cvvInput {
+  padding: 1rem;
+  border: 0.5px solid var(--GRAY-COLOR);
+  flex: 0.4;
+  display: flex;
+  align-items: center;
+
+  input {
+    margin-left: 0.625rem;
+    border: none;
+    font-size: 12px;
+    min-width: 1rem;
+  }
+
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
+}
+
+.inputBox {
+  padding: 1rem;
+  border: 0.5px solid var(--GRAY-COLOR);
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+.cardNumberBox {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.cardInput {
+  margin-left: 0.625rem;
+  border: none;
+  width: 8rem;
+  font-size: 12px;
+}
+
+.dateInput {
+  margin-left: 0.625rem;
+  border: none;
+  min-width: 1rem;
+  font-size: 12px;
+}
+
+.dateBox {
+  width: 8rem;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 1200px) {
+    margin-top: 1rem;
     margin-left: 0rem;
   }
 }
