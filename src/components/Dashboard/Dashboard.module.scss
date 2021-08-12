@@ -1,0 +1,43 @@
+.Box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Container {
+  width: 75rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.welcomeBox {
+  width: 28rem;
+}
+
+.welcomeHeading {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--MENU-COLOR);
+}
+
+.welcomeSubtext {
+  font-size: 0.875rem;
+  color: var(--GRAY-COLOR);
+  margin-top: 1rem;
+  line-height: 1.3rem;
+}
+
+.donatedHeading {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: black;
+  margin-top: 2rem;
+  border-bottom: 5px solid var(--PRIMARY-COLOR);
+
+  span {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}

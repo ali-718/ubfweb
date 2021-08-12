@@ -1,0 +1,164 @@
+.Box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.leftImage {
+  width: 50%;
+  object-fit: cover;
+  height: 100%;
+
+  @media (max-width: 1050px) {
+    width: 40%;
+  }
+
+  @media (max-width: 800px) {
+    display: none;
+  }
+}
+
+.rightBox {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+
+  @media (max-width: 1050px) {
+    width: 60%;
+  }
+
+  @media (max-width: 800px) {
+    width: 100%;
+    margin-top: 5rem;
+  }
+
+  @media (max-width: 600px) {
+    margin-top: 2rem;
+  }
+}
+
+.leftSide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--FONT-FAMILY);
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--MENU-COLOR);
+  margin-top: 2rem;
+  width: 60%;
+  text-align: center;
+  margin-bottom: 2rem;
+
+  @media (max-width: 1200px) {
+    width: 80%;
+  }
+
+  @media (max-width: 600px) {
+    width: 90%;
+
+    font-size: 1.5rem;
+  }
+}
+
+.inputsBox {
+  width: 60%;
+  margin-top: 3rem;
+
+  @media (max-width: 1200px) {
+    width: 80%;
+  }
+
+  @media (max-width: 600px) {
+    width: 90%;
+    margin-top: 1.5rem;
+  }
+}
+
+.forgotBox {
+  width: 60%;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 0.625rem;
+
+  @media (max-width: 1200px) {
+    width: 80%;
+  }
+
+  @media (max-width: 600px) {
+    width: 90%;
+  }
+}
+
+.button {
+  width: 100%;
+  background-color: var(--BUTTON-COLOR);
+
+  p {
+    color: white;
+  }
+}
+
+.forgotLabel {
+  color: var(--PRIMARY-COLOR);
+}
+
+.createAccountText {
+  font-size: 1rem;
+  margin-top: 5rem;
+
+  span {
+    color: var(--PRIMARY-COLOR);
+    cursor: pointer;
+  }
+
+  @media (max-width: 600px) {
+    width: 90%;
+    text-align: center;
+  }
+
+  @media (max-width: 400px) {
+    margin-top: 3rem;
+  }
+}
+
+.lastText {
+  font-size: 0.6rem;
+  color: var(--GRAY-COLOR);
+  margin-top: 5rem;
+  position: absolute;
+  bottom: 1rem;
+}
+
+.policyBox {
+  width: 60%;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.625rem;
+
+  p {
+    color: var(--GRAY-COLOR);
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 1200px) {
+    width: 80%;
+  }
+
+  @media (max-width: 600px) {
+    width: 90%;
+  }
+}
