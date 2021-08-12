@@ -1,6 +1,7 @@
 import React from "react";
 import { PageContainer } from "../../containers/PageContainer";
 import styles from "./Dashboard.module.scss";
+import { DonationChart } from "./DonationChart/DonationChart";
 
 export const Dashboard = () => {
   return (
@@ -17,6 +18,8 @@ export const Dashboard = () => {
               You donated <span>$150</span> USD this month.
             </p>
           </div>
+
+          <DonationChart />
         </div>
       </div>
     </PageContainer>
