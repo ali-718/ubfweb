@@ -15,7 +15,6 @@ export const Routes = () => {
         <Route exact path={DONATE} component={DonatePage} />
         <Route exact path={LOGIN} component={LoginPage} />
         <Route exact path={SIGNUP} component={SignupPage} />
-        <Route exact path={DASHBOARD} component={DashboardPage} />
       </Switch>
     </Router>
   );
