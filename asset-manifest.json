@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ubfweb/static/css/main.f10725d1.chunk.css",
-    "main.js": "/ubfweb/static/js/main.38ace74b.chunk.js",
-    "main.js.map": "/ubfweb/static/js/main.38ace74b.chunk.js.map",
+    "main.js": "/ubfweb/static/js/main.53778d12.chunk.js",
+    "main.js.map": "/ubfweb/static/js/main.53778d12.chunk.js.map",
     "runtime-main.js": "/ubfweb/static/js/runtime-main.c76ef70d.js",
     "runtime-main.js.map": "/ubfweb/static/js/runtime-main.c76ef70d.js.map",
     "static/js/2.19fce131.chunk.js": "/ubfweb/static/js/2.19fce131.chunk.js",
@@ -50,6 +50,6 @@
     "static/js/runtime-main.c76ef70d.js",
     "static/js/2.19fce131.chunk.js",
     "static/css/main.f10725d1.chunk.css",
-    "static/js/main.38ace74b.chunk.js"
+    "static/js/main.53778d12.chunk.js"
   ]
 }
