@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/ubfweb/static/css/main.7473e310.chunk.css",
-    "main.js": "/ubfweb/static/js/main.7a225b7f.chunk.js",
-    "main.js.map": "/ubfweb/static/js/main.7a225b7f.chunk.js.map",
+    "main.css": "/ubfweb/static/css/main.65b152b3.chunk.css",
+    "main.js": "/ubfweb/static/js/main.5982a76a.chunk.js",
+    "main.js.map": "/ubfweb/static/js/main.5982a76a.chunk.js.map",
     "runtime-main.js": "/ubfweb/static/js/runtime-main.c76ef70d.js",
     "runtime-main.js.map": "/ubfweb/static/js/runtime-main.c76ef70d.js.map",
     "static/js/2.367f6e8a.chunk.js": "/ubfweb/static/js/2.367f6e8a.chunk.js",
     "static/js/2.367f6e8a.chunk.js.map": "/ubfweb/static/js/2.367f6e8a.chunk.js.map",
     "index.html": "/ubfweb/index.html",
-    "static/css/main.7473e310.chunk.css.map": "/ubfweb/static/css/main.7473e310.chunk.css.map",
+    "static/css/main.65b152b3.chunk.css.map": "/ubfweb/static/css/main.65b152b3.chunk.css.map",
     "static/js/2.367f6e8a.chunk.js.LICENSE.txt": "/ubfweb/static/js/2.367f6e8a.chunk.js.LICENSE.txt",
     "static/media/boy.944f0ea1.png": "/ubfweb/static/media/boy.944f0ea1.png",
     "static/media/cardDateicon.652f824c.svg": "/ubfweb/static/media/cardDateicon.652f824c.svg",
@@ -49,7 +49,7 @@
   "entrypoints": [
     "static/js/runtime-main.c76ef70d.js",
     "static/js/2.367f6e8a.chunk.js",
-    "static/css/main.7473e310.chunk.css",
-    "static/js/main.7a225b7f.chunk.js"
+    "static/css/main.65b152b3.chunk.css",
+    "static/js/main.5982a76a.chunk.js"
   ]
 }
