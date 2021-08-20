@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 .Box {
   width: 100%;
   margin: 0;
@@ -24,33 +28,21 @@
 }
 
 .firstContentImageBox {
-  width: 90%;
+  width: 60%;
   background-image: url("../../assets/fistMap.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  height: 60rem;
-
-  @media (max-width: 1300px) {
-    height: 40rem;
-  }
-
-  @media (max-width: 1000px) {
-    height: 30rem;
-  }
+  height: 40rem;
+  margin-top: 5rem;
 
   @media (max-width: 800px) {
-    height: 30rem;
+    height: 20rem;
+    margin-top: 2rem;
+    width: 90%;
   }
 
   @media (max-width: 600px) {
-    background-size: cover;
-    background-position-x: center;
-    background-position-y: center;
     width: 100%;
-  }
-
-  @media (max-width: 550px) {
-    margin-top: -3rem;
   }
 }
 
@@ -98,11 +90,12 @@
 
 .highLighterHeadingOne {
   font-size: 1.8rem;
-  color: white;
+  color: black;
   display: flex;
   flex-direction: row;
   align-items: center;
   margin: 0;
+  margin-bottom: 10rem;
 
   p {
     z-index: 5;
@@ -111,16 +104,33 @@
     text-transform: uppercase;
   }
 
-  @media (max-width: 1400px) {
-    font-size: 1.4rem;
-  }
-
-  @media (max-width: 1100px) {
+  @media (max-width: 800px) {
     font-size: 1.2rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    width: 90%;
+  }
+}
+
+.mainHeadingOne {
+  font-size: 2.5rem;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  font-weight: bold;
+  justify-content: center;
+
+  p {
+    z-index: 5;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
   }
 
   @media (max-width: 800px) {
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -156,56 +166,59 @@
   }
 }
 
+.stateInputBox {
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 4.5rem;
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: space-between;
+
+  input {
+    width: 80%;
+    border: none;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.inputButtonBox {
+  width: 15%;
+
+  @media (max-width: 600px) {
+    margin-top: 2rem;
+    width: 40%;
+  }
+}
+
 .headingThree {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 40rem;
-  margin-top: 1rem;
+  width: 60rem;
+  margin-top: 3rem;
 
-  input {
+  @media (max-width: 1300px) {
     width: 90%;
-    padding: 1.5rem;
-    border-radius: 4.5rem;
-    border: none;
-
-    @media (max-width: 800px) {
-      padding: 1rem;
-    }
-  }
-
-  @media (max-width: 1400px) {
-    margin-top: 1rem;
-  }
-
-  @media (max-width: 1100px) {
-    width: 30rem;
-  }
-
-  @media (max-width: 800px) {
-    width: 25rem;
-  }
-
-  @media (max-width: 500px) {
-    width: 100%;
   }
 }
 
 .button {
-  width: 14.5rem;
+  width: 100%;
   background-color: var(--BUTTON-COLOR);
-  margin-top: 1rem;
 }
 
 .belowContent {
   width: 100%;
-  margin-top: -10rem;
-  margin-bottom: 2rem;
-
-  @media (max-width: 1400px) {
-    margin-top: -5rem;
-  }
+  margin-bottom: 5rem;
+  margin-top: 10rem;
 
   @media (max-width: 900px) {
     display: flex;
@@ -220,7 +233,6 @@
   font-size: 2.6rem;
   color: black;
   font-weight: bold;
-  margin-left: 1.5rem;
 
   @media (max-width: 600px) {
     font-size: 1.8rem;
@@ -240,7 +252,10 @@
 }
 
 .belowContainer {
-  margin-left: 8rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @media (max-width: 1400px) {
     margin-left: 6rem;
@@ -262,10 +277,9 @@
 
 .belowContentContainer {
   display: flex;
-  margin-top: 0rem;
-  margin-left: 8rem;
-  width: 70%;
-  justify-content: space-between;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
 
   @media (max-width: 1400px) {
     margin-left: 6rem;
@@ -290,11 +304,7 @@
 }
 
 .contentsText {
-  width: 30rem;
-
-  @media (max-width: 900px) {
-    margin-left: 1rem;
-  }
+  width: 35rem;
 
   @media (max-width: 700px) {
     width: 100%;

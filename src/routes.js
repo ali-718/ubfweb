@@ -9,7 +9,7 @@ import { HOME, DONATE, LOGIN, SIGNUP, DASHBOARD } from "./routesMap";
 
 export const Routes = () => {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route exact path={HOME} component={HomePage} />
         <Route exact path={DONATE} component={DonatePage} />

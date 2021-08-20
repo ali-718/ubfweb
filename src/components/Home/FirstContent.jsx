@@ -9,27 +9,28 @@ export const FirstContent = () => {
   const { width } = useWindowSize();
 
   return (
-    <div className={styles.firstContentBox}>
-      <div className={styles.firstContentImageBox}>
+    <>
+      <div className={styles.firstContentBox}>
         <div className={styles.highLighterOneBox}>
-          <div className={styles.highLighterHeadingOne}>
-            <p>Feeding people across the United States</p>
-            <img className={styles.highlighter1} src={highlighter1} />
+          <div className={styles.mainHeadingOne}>
+            <p>Who would you like to feed today?</p>
           </div>
 
-          <div className={styles.headingTwo}>
-            {width <= 800 ? (
-              <p>Who would like to feed today?</p>
-            ) : (
-              <p>
-                Who would like to <br /> feed today?
-              </p>
-            )}
-          </div>
           <div className={styles.headingThree}>
-            <input placeholder="Feed African American women in Essex County, NJ" />
-            <SmallButton text={"Donate"} classname={styles.button} />
+            <div className={styles.stateInputBox}>
+              <div className={styles.inputButtonBox}>
+                <SmallButton text={"Donate"} classname={styles.button} />
+              </div>
+              <input placeholder="Feed African American women in Essex County, NJ" />
+            </div>
           </div>
+        </div>
+
+        <div className={styles.firstContentImageBox}></div>
+
+        <div className={styles.highLighterHeadingOne}>
+          <p>Feeding people across the United States</p>
+          <img className={styles.highlighter1} src={highlighter1} />
         </div>
       </div>
 
@@ -49,18 +50,8 @@ export const FirstContent = () => {
               their privacy and making it a seamless experience to procure food.
             </p>
           </div>
-          <div className={styles.contentsTextSecond}>
-            <p>
-              We work with the food suppliers (restaurants) to identify the food
-              items that otherwise would go to waste and offer them a discounted
-              price for the food. The donors as well as food channel partners
-              will get full tax benefits for their financial contributions. UBF
-              will act as a bridge between the three parties and ensure full
-              transparency throughout the process.
-            </p>
-          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
