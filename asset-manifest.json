@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/ubfweb/static/css/main.65b152b3.chunk.css",
-    "main.js": "/ubfweb/static/js/main.5982a76a.chunk.js",
-    "main.js.map": "/ubfweb/static/js/main.5982a76a.chunk.js.map",
+    "main.css": "/ubfweb/static/css/main.1c3125a9.chunk.css",
+    "main.js": "/ubfweb/static/js/main.3765d8db.chunk.js",
+    "main.js.map": "/ubfweb/static/js/main.3765d8db.chunk.js.map",
     "runtime-main.js": "/ubfweb/static/js/runtime-main.c76ef70d.js",
     "runtime-main.js.map": "/ubfweb/static/js/runtime-main.c76ef70d.js.map",
-    "static/js/2.367f6e8a.chunk.js": "/ubfweb/static/js/2.367f6e8a.chunk.js",
-    "static/js/2.367f6e8a.chunk.js.map": "/ubfweb/static/js/2.367f6e8a.chunk.js.map",
+    "static/js/2.cc6ce06b.chunk.js": "/ubfweb/static/js/2.cc6ce06b.chunk.js",
+    "static/js/2.cc6ce06b.chunk.js.map": "/ubfweb/static/js/2.cc6ce06b.chunk.js.map",
     "index.html": "/ubfweb/index.html",
-    "static/css/main.65b152b3.chunk.css.map": "/ubfweb/static/css/main.65b152b3.chunk.css.map",
-    "static/js/2.367f6e8a.chunk.js.LICENSE.txt": "/ubfweb/static/js/2.367f6e8a.chunk.js.LICENSE.txt",
+    "static/css/main.1c3125a9.chunk.css.map": "/ubfweb/static/css/main.1c3125a9.chunk.css.map",
+    "static/js/2.cc6ce06b.chunk.js.LICENSE.txt": "/ubfweb/static/js/2.cc6ce06b.chunk.js.LICENSE.txt",
     "static/media/boy.944f0ea1.png": "/ubfweb/static/media/boy.944f0ea1.png",
     "static/media/cardDateicon.652f824c.svg": "/ubfweb/static/media/cardDateicon.652f824c.svg",
     "static/media/cardIcon.69c83fd9.svg": "/ubfweb/static/media/cardIcon.69c83fd9.svg",
+    "static/media/counties-data-insecurity.05c61046.csv": "/ubfweb/static/media/counties-data-insecurity.05c61046.csv",
     "static/media/cvvIcon.f9c3efb3.svg": "/ubfweb/static/media/cvvIcon.f9c3efb3.svg",
     "static/media/distribution.f918f51c.svg": "/ubfweb/static/media/distribution.f918f51c.svg",
     "static/media/donate.4310673f.svg": "/ubfweb/static/media/donate.4310673f.svg",
     "static/media/Donate.module.scss": "/ubfweb/static/media/donateBackground.ef366524.svg",
     "static/media/donateIcon.4bc1214c.png": "/ubfweb/static/media/donateIcon.4bc1214c.png",
     "static/media/facebook.8428a1be.svg": "/ubfweb/static/media/facebook.8428a1be.svg",
-    "static/media/Home.module.scss": "/ubfweb/static/media/fistMap.9d321303.svg",
     "static/media/food1.bf58348a.png": "/ubfweb/static/media/food1.bf58348a.png",
     "static/media/food2.c0f5f9fd.png": "/ubfweb/static/media/food2.c0f5f9fd.png",
     "static/media/food3.e5e02474.png": "/ubfweb/static/media/food3.e5e02474.png",
@@ -48,8 +48,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.c76ef70d.js",
-    "static/js/2.367f6e8a.chunk.js",
-    "static/css/main.65b152b3.chunk.css",
-    "static/js/main.5982a76a.chunk.js"
+    "static/js/2.cc6ce06b.chunk.js",
+    "static/css/main.1c3125a9.chunk.css",
+    "static/js/main.3765d8db.chunk.js"
   ]
 }
