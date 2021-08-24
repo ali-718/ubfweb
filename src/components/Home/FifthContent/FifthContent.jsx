@@ -13,8 +13,7 @@ export const FifthContent = () => {
         </div>
 
         <p className={styles.subHeading}>
-          Why throw your waste food when you can sell it to us ? Help us save
-          lifes and make a better world.
+          Help us combat food insecurity and food wastage.
         </p>
 
         <input
@@ -24,7 +23,7 @@ export const FifthContent = () => {
         <input className={styles.input} placeholder={"Street"} />
 
         <input className={styles.input} placeholder={"Email"} />
-        <SmallButton classname={styles.button} text={"Sign up"} />
+        <SmallButton classname={styles.button} text={"Let’s Connect"} />
       </div>
     </div>
   );

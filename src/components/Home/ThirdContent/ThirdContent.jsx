@@ -29,31 +29,31 @@ export const ThirdContent = () => {
               <div>
                 <div className={styles.headingBox}>
                   <div className={styles.headingTextBox}>
-                    <p>2.348</p>
+                    <p>37.2M</p>
                     <img className={styles.highlighter} src={highLighter4} />
-                    <span>resturants connected</span>
+                    <span>Americans are food insecure</span>
                   </div>
                   <div className={styles.subTextBox}>
                     <p>
-                      We are connected with over 2.348 restaurants all over U.S
-                      and we are still growing.
+                      One in ten households in the U.S. experience food
+                      insecurity.
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className={styles.secondBox}>
+              <div className={styles.secondBoxSpecial}>
                 <div className={styles.headingBox}>
                   <div className={styles.headingTextBox}>
-                    <p>12.000</p>
-                    <img className={styles.highlighter} src={highLighter4} />
-                    <span>kg of food</span>
+                    <p>13M</p>
+                    <img
+                      className={styles.highlighterSpecial}
+                      src={highLighter4}
+                    />
+                    <span>American children are food insecure </span>
                   </div>
                   <div className={styles.subTextBox}>
-                    <p>
-                      We are connected with over 2.348 restaurants all over U.S
-                      and we are still growing.
-                    </p>
+                    <p>One in six children experience food insecurity.</p>
                   </div>
                 </div>
               </div>
@@ -63,14 +63,14 @@ export const ThirdContent = () => {
               <div>
                 <div className={styles.headingBox}>
                   <div className={styles.headingTextBox}>
-                    <p>8.512</p>
+                    <p>30B</p>
                     <img className={styles.highlighter} src={highLighter4} />
-                    <span>people fed</span>
+                    <span>lbs of food is wasted annually</span>
                   </div>
                   <div className={styles.subTextBox}>
                     <p>
-                      We are connected with over 2.348 restaurants all over U.S
-                      and we are still growing.
+                      Restaurants continue to waste food which can otherwise be
+                      donated to those in need.
                     </p>
                   </div>
                 </div>
@@ -79,14 +79,14 @@ export const ThirdContent = () => {
               <div className={styles.secondBox}>
                 <div className={styles.headingBox}>
                   <div className={styles.headingTextBox}>
-                    <p>47.635</p>
+                    <p>21.8%</p>
                     <img className={styles.highlighter} src={highLighter4} />
-                    <span>meals served</span>
+                    <span>African Americans are food insecure </span>
                   </div>
                   <div className={styles.subTextBox}>
                     <p>
-                      We are connected with over 2.348 restaurants all over U.S
-                      and we are still growing.
+                      African Americans are 2x more likely to face hunger than
+                      other racial groups.
                     </p>
                   </div>
                 </div>
@@ -180,8 +180,8 @@ export const ThirdContent = () => {
                   </div>
                   <div className={styles.thirdContentSubText}>
                     <p>
-                      Choose the people you want to give your money to. It can
-                      be a certain ethnicity, age or even gender.
+                      Choose the people you want to impact with your donation.
+                      You can choose based on ethnicity, age and/or gender.
                     </p>
                   </div>
                 </div>
@@ -214,8 +214,7 @@ export const ThirdContent = () => {
                   </div>
                   <div className={styles.thirdContentSubText}>
                     <p>
-                      Choose the state you want to donate your money. Money
-                      could be given to your old neighborhood,church or school.
+                      Choose the county you want to impact with your donation.
                     </p>
                   </div>
                 </div>
@@ -224,7 +223,7 @@ export const ThirdContent = () => {
           </div>
         </div>
 
-        <img src={usMap} className={styles.thirdContentImageTwo} />
+        <img src={usMap} className={styles.thirdContentImageTwoSpecial} />
       </div>
 
       <div className={styles.thirdContentBoxTwo}>
@@ -250,7 +249,7 @@ export const ThirdContent = () => {
                   <div className={styles.thirdContentSubText}>
                     <p>
                       Do you want all of your money to be given directly to the
-                      cause, or would you like to give an amount to our
+                      cause, or would you like to split the amount to the
                       overhead? You choose!
                     </p>
                   </div>

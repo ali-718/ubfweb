@@ -26,8 +26,7 @@ export const FourthContent = () => {
         Are you someone who needs a warm plate of food on a daily basis?
       </p>
       <p className={styles.subHeading}>
-        Get a warm plate of food for you and your family with{" "}
-        <span>3 easy steps</span>
+        Get a warm plate of food in <span>3 easy steps</span>
       </p>
 
       <div className={styles.belowContent}>
@@ -36,15 +35,15 @@ export const FourthContent = () => {
             image={oneIcon}
             heading={"Sign Up"}
             text={
-              "Sign up to our platform and enter you details in order to request the card that will give you the permission to receive a free meal."
+              "Sign up on our platform by answering a few questions. We determine your eligibility based on the documents you provide. "
             }
           />
 
           <NumberIconContainer
             image={twoIcon}
-            heading={"Get your card"}
+            heading={"Get Approved"}
             text={
-              "One week after your appication you will receive a card. This card will allow you to find your nearest restaurant which is connected with us ."
+              "Once approved, you receive access to participating restaurants within your location. "
             }
           />
 
@@ -52,7 +51,7 @@ export const FourthContent = () => {
             image={threeIcon}
             heading={"Receive your meal"}
             text={
-              "Now you are ready to go to one of our connected restaurants and receive your warm meal for you and your family."
+              "Using your QR code, pick up a meal at a participating restaurant. "
             }
           />
         </div>
