@@ -98,11 +98,11 @@ export const ThirdContent = () => {
         <img src={USA} className={styles.image} />
       </div>
 
-      <p className={styles.headingTwo}>
+      {/* <p className={styles.headingTwo}>
         Save lives by donating <span>today</span>
-      </p>
+      </p> */}
 
-      <div className={styles.boxTwo}>
+      {/* <div className={styles.boxTwo}>
         <div className={styles.facilityBox}>
           <img src={donate} className={styles.facilityIcon} />
           <img
@@ -155,7 +155,7 @@ export const ThirdContent = () => {
           </p>
           <SmallButton text={"Learn how"} classname={styles.button} />
         </div>
-      </div>
+      </div> */}
 
       <div className={styles.thirdContentBox}>
         <div>
@@ -176,12 +176,12 @@ export const ThirdContent = () => {
               <div>
                 <div className={styles.headingBox}>
                   <div className={styles.headingTextBox}>
-                    <p>Choose the state</p>
+                    <p>Choose the people</p>
                   </div>
                   <div className={styles.thirdContentSubText}>
                     <p>
-                      Choose the state you want to donate your money. Money
-                      could be given to your old neighborhood,church or school.
+                      Choose the people you want to give your money to. It can
+                      be a certain ethnicity, age or even gender.
                     </p>
                   </div>
                 </div>
@@ -189,8 +189,7 @@ export const ThirdContent = () => {
             </div>
           </div>
         </div>
-
-        <img src={usMap} className={styles.thirdContentImage} />
+        <img src={georgiaMap} className={styles.thirdContentImageTwo} />
       </div>
 
       <div className={styles.thirdContentBoxTwo}>
@@ -211,12 +210,12 @@ export const ThirdContent = () => {
               <div>
                 <div className={styles.headingBox}>
                   <div className={styles.headingTextBox}>
-                    <p>Choose the people</p>
+                    <p>Choose the state</p>
                   </div>
                   <div className={styles.thirdContentSubText}>
                     <p>
-                      Choose the people you want to give your money to. It can
-                      be a certain ethnicity, age or even gender.
+                      Choose the state you want to donate your money. Money
+                      could be given to your old neighborhood,church or school.
                     </p>
                   </div>
                 </div>
@@ -225,7 +224,7 @@ export const ThirdContent = () => {
           </div>
         </div>
 
-        <img src={georgiaMap} className={styles.thirdContentImageTwo} />
+        <img src={usMap} className={styles.thirdContentImageTwo} />
       </div>
 
       <div className={styles.thirdContentBoxTwo}>

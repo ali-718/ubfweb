@@ -33,6 +33,25 @@
   }
 }
 
+.newheading {
+  color: black;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 1rem;
+
+  @media (max-width: 1300px) {
+    font-size: 2.5rem;
+  }
+
+  @media (max-width: 1100px) {
+    text-align: center;
+  }
+
+  @media (max-width: 550px) {
+    font-size: 2rem;
+  }
+}
+
 .ContentBox {
   display: flex;
   justify-content: center;
@@ -148,5 +167,13 @@
   @media (max-width: 550px) {
     width: auto;
     margin-top: 1rem;
+  }
+}
+
+.secondContentNewHeadingBox {
+  width: 80%;
+
+  @media (max-width: 600px) {
+    width: 90%;
   }
 }

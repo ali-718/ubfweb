@@ -2,11 +2,16 @@ import React, { useEffect, useState } from "react";
 import styles from "./Home.module.scss";
 import highlighter1 from "../../assets/highLighter1.svg";
 import highlighter2 from "../../assets/highLighter2.svg";
+import weBuyIcon from "../../assets/weBuyIcon.png";
+import resturantIcon from "../../assets/resturantIcon.png";
+import donateIcon from "../../assets/donateIcon.png";
 import { useWindowSize } from "../../hooks/useWindowize";
 import { SmallButton } from "../Buttons/SmallButton";
 import { ComposableMap, Geographies, Geography } from "react-simple-maps";
 import { scaleQuantile } from "d3-scale";
 import { csv } from "d3-fetch";
+import thirdContentStyles from "../Home/ThirdContent/ThirdContent.module.scss";
+
 import chartData from "../../data/counties-data-insecurity.csv";
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/us-atlas@3/counties-10m.json";
@@ -83,7 +88,48 @@ export const FirstContent = () => {
           <p className={styles.headingBelowContent}>What we do</p>
           <img src={highlighter2} className={styles.headingBelowContentImage} />
         </div>
-        <div className={styles.belowContentContainer}>
+
+        <div className={styles.boxTwo}>
+          <div className={thirdContentStyles.facilityBox}>
+            <img src={weBuyIcon} className={styles.facilityIcon} />
+
+            <p className={thirdContentStyles.facilitySubText}>
+              We work with the food suppliers (restaurants) via Zewst to
+              identify the food items before going to waste
+            </p>
+            <SmallButton
+              text={"Learn how"}
+              classname={thirdContentStyles.button}
+            />
+          </div>
+          <div className={thirdContentStyles.facilityBox}>
+            <img src={resturantIcon} className={styles.facilityIcon} />
+
+            <p className={thirdContentStyles.facilitySubText}>
+              People in need receive a warm meal from participating restaurants
+              based on their Need Score.
+            </p>
+            <SmallButton
+              text={"Learn how"}
+              classname={thirdContentStyles.button}
+            />
+          </div>
+          <div className={thirdContentStyles.facilityBox}>
+            <img src={donateIcon} className={styles.facilityIcon} />
+
+            <p className={thirdContentStyles.facilitySubText}>
+              The donors as well as food channel partners recieve enhanced tax
+              deductions and 100% transparency for their financial
+              contributions.
+            </p>
+            <SmallButton
+              text={"Learn how"}
+              classname={thirdContentStyles.button}
+            />
+          </div>
+        </div>
+
+        {/* <div className={styles.belowContentContainer}>
           <div className={styles.contentsText}>
             <p>
               Universal Basic Food is a three-sided marketplace between people
@@ -94,7 +140,7 @@ export const FirstContent = () => {
               their privacy and making it a seamless experience to procure food.
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

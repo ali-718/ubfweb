@@ -18,12 +18,19 @@ export const IconBox = ({ image, heading, text }) => (
 export const SecondContent = () => {
   return (
     <div className={styles.Box}>
-      <p className={styles.topHeading}>
+      {/* <p className={styles.topHeading}>
         getting together to help those who needs us
-      </p>
-      <p className={styles.heading}>How we do it</p>
+      </p> */}
+      {/* <p className={styles.heading}>How we do it</p> */}
 
-      <div className={styles.ContentBox}>
+      <div className={styles.secondContentNewHeadingBox}>
+        <p className={styles.newheading}>
+          UBF will act as a bridge between restaurants, the needy and the donors
+          & ensures full transparency throughout the process.
+        </p>
+      </div>
+
+      {/* <div className={styles.ContentBox}>
         <img src={boy} className={styles.image} />
         <div className={styles.leftContentBox}>
           <IconBox
@@ -48,7 +55,7 @@ export const SecondContent = () => {
             }
           />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
