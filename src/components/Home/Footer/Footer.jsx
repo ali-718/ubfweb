@@ -6,8 +6,10 @@ import facebook from "../../../assets/facebook.svg";
 import instagram from "../../../assets/instagram.svg";
 import twitter from "../../../assets/twitter.svg";
 import { SmallButton } from "../../Buttons/SmallButton";
+import { Link, withRouter } from "react-router-dom";
+import { DONATE, SIGNUP } from "../../../routesMap";
 
-export const Footer = () => {
+export const Footer = withRouter((props) => {
   return (
     <div className={styles.box}>
       <div className={styles.container}>
@@ -56,14 +58,26 @@ export const Footer = () => {
           </div>
 
           <div className={styles.menuItemsBox}>
-            <p className={styles.menuBoxItem}>Donate</p>
+            <p
+              onClick={() => props.history.push(DONATE)}
+              className={styles.menuBoxItem}
+            >
+              Donate
+            </p>
             <p className={styles.menuBoxItemSpace}>For ReCiPIENTS</p>
             <p className={styles.menuBoxItemSpace}>For restaurants</p>
-            <p className={styles.menuBoxItemSpace}>Sign up</p>
-            <SmallButton text={"Donate"} classname={styles.button} />
+            <p
+              onClick={() => props.history.push(SIGNUP)}
+              className={styles.menuBoxItemSpace}
+            >
+              Sign up
+            </p>
+            <Link style={{ textDecoration: "none" }} to={DONATE}>
+              <SmallButton text={"Donate"} classname={styles.button} />
+            </Link>
           </div>
         </div>
       </div>
     </div>
   );
-};
+});

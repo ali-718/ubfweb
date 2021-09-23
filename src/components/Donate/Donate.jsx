@@ -7,6 +7,7 @@ import { SmallButton } from "../Buttons/SmallButton";
 import cardIcon from "../../assets/cardIcon.svg";
 import cardDateiconsvg from "../../assets/cardDateicon.svg";
 import cvvIcon from "../../assets/cvvIcon.svg";
+import { AuthInputs } from "../Inputs/AuthInputs";
 
 const PrettoSlider = withStyles({
   root: {
@@ -54,6 +55,8 @@ export const Donate = ({
   OnDonationSelection,
   paymentMode,
   setPaymentMode,
+  setOtherAmount,
+  otherAmount,
 }) => {
   return (
     <PageContainer>
@@ -133,16 +136,37 @@ export const Donate = ({
                       >
                         <p>$200 USD</p>
                       </div>
-                      <div
-                        onClick={() => setDonationAmount("Other Amount")}
-                        className={
-                          donationAmount === "Other Amount"
-                            ? styles.priceBoxSelectedLarge
-                            : styles.priceBoxUnselectedLarge
-                        }
-                      >
-                        <p>Other Amount</p>
-                      </div>
+                      {donationAmount === "Other Amount" ? (
+                        <div
+                          onClick={() => setDonationAmount("Other Amount")}
+                          className={styles.priceBoxUnselectedLarge}
+                        >
+                          <div className={styles.otherBox}>
+                            <input
+                              type={"number"}
+                              autoFocus
+                              placeholder={"Other"}
+                              className={styles.donateInput}
+                              value={otherAmount}
+                              onChange={(e) => {
+                                setOtherAmount(e.target.value);
+                              }}
+                            />
+                            <p>USD</p>
+                          </div>
+                        </div>
+                      ) : (
+                        <div
+                          onClick={() => setDonationAmount("Other Amount")}
+                          className={
+                            donationAmount === "Other Amount"
+                              ? styles.priceBoxSelectedLarge
+                              : styles.priceBoxUnselectedLarge
+                          }
+                        >
+                          <p>Other Amount</p>
+                        </div>
+                      )}
                     </div>
 
                     <div className={styles.sliderHeading}>

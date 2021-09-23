@@ -6,6 +6,7 @@ import menuIcon from "../../assets/menuIcon.png";
 import { SmallButton } from "../Buttons/SmallButton";
 import { useWindowSize } from "../../hooks/useWindowize";
 import { Link, withRouter } from "react-router-dom";
+import { DONATE, SIGNUP } from "../../routesMap";
 
 export const Header = withRouter((props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,12 +49,15 @@ export const Header = withRouter((props) => {
           <div className={styles.menuBoxWithBorder}>
             <p>For restaurants</p>
           </div>
-          <div className={styles.menuBox}>
+          <div
+            onClick={() => props.history.push(SIGNUP)}
+            className={styles.menuBox}
+          >
             <p>Sign up</p>
           </div>
 
           <div className={styles.menuButtonBox}>
-            <Link style={{ textDecoration: "none" }} to={"/donate"}>
+            <Link style={{ textDecoration: "none" }} to={DONATE}>
               <SmallButton text={"Donate"} classname={styles.button} />
             </Link>
           </div>
@@ -70,11 +74,14 @@ export const Header = withRouter((props) => {
           <div className={styles.dropDownMenuItem}>
             <p>For restaurants</p>
           </div>
-          <div className={styles.dropDownMenuItem}>
+          <div
+            onClick={() => props.history.push(SIGNUP)}
+            className={styles.dropDownMenuItem}
+          >
             <p>Sign up</p>
           </div>
           <div className={styles.dropDownMenuItem}>
-            <Link style={{ textDecoration: "none" }} to={"/donate"}>
+            <Link style={{ textDecoration: "none" }} to={DONATE}>
               <SmallButton
                 text={"Donate"}
                 classname={styles.menuDropdownButton}
