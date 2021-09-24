@@ -17,3 +17,12 @@ span {
 input:focus {
   outline: none;
 }
+
+.sq-payment-form {
+  margin-top: 1rem !important;
+  width: 85% !important;
+
+  @media (max-width: 1200px) {
+    width: 95% !important;
+  }
+}

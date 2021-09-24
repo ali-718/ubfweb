@@ -323,15 +323,10 @@
 }
 
 .modeGrid2 {
-  display: flex;
   margin-top: 1rem;
   width: 85%;
-
-  @media (max-width: 1200px) {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+  display: flex;
+  flex-direction: column;
 }
 
 .sliderHeading {
@@ -463,11 +458,17 @@
   }
 }
 
+.formContainer {
+  width: 50%;
+}
+
 .inputName {
-  padding: 1rem;
-  border: 0.5px solid var(--GRAY-COLOR);
+  padding: 1.2rem;
+  border: 0.5px solid var(--PRICE-BACKGROUND);
   flex: 1;
   min-width: 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
 
   @media (max-width: 1200px) {
     width: 100%;
@@ -475,15 +476,15 @@
 }
 
 .inputSecondName {
-  padding: 1rem;
-  border: 0.5px solid var(--GRAY-COLOR);
+  padding: 1.2rem;
+  border: 0.5px solid var(--PRICE-BACKGROUND);
   flex: 1;
-  border-left: none;
+  border-radius: 5px;
   min-width: 1rem;
+  font-size: 1rem;
 
   @media (max-width: 1200px) {
     width: 100%;
-    border-left: 0.5px solid var(--GRAY-COLOR);
     margin-top: 1rem;
   }
 }

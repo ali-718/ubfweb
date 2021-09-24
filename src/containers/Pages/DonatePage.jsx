@@ -9,6 +9,11 @@ export const DonatePage = () => {
   const [tab, setTab] = useState(0);
   const [paymentMode, setPaymentMode] = useState(0);
   const [otherAmount, setOtherAmount] = useState("");
+  // data
+  const [FirstName, setFirstName] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [email, setEmail] = useState("");
+  const [errors, seterrors] = useState([]);
 
   const changeFrequency = (val) => {
     setTab(0);
@@ -30,6 +35,41 @@ export const DonatePage = () => {
     setTab(val);
   };
 
+  const cardNonceResponseReceived = (
+    errors,
+    nonce,
+    cardData,
+    buyerVerificationToken
+  ) => {
+    if (
+      FirstName.trim().length === 0 ||
+      lastname.trim().length === 0 ||
+      email.trim().length === 0
+    ) {
+      seterrors(["Kindly fill all fields"]);
+      return;
+    }
+
+    if (!validator.isEmail(email.trim())) {
+      seterrors(["Incorrect Email Format"]);
+      return;
+    }
+
+    if (errors) {
+      seterrors(errors.map((error) => error.message));
+      return;
+    }
+
+    seterrors([]);
+
+    alert(
+      "nonce created: " +
+        nonce +
+        ", buyerVerificationToken: " +
+        buyerVerificationToken
+    );
+  };
+
   return (
     <Donate
       donationAmount={donationAmount}
@@ -44,6 +84,15 @@ export const DonatePage = () => {
       setOtherAmount={setOtherAmount}
       otherAmount={otherAmount}
       setPaymentMode={setPaymentMode}
+      cardNonceResponseReceived={cardNonceResponseReceived}
+      // data
+      setFirstName={setFirstName}
+      FirstName={FirstName}
+      lastname={lastname}
+      setLastname={setLastname}
+      email={email}
+      setEmail={setEmail}
+      errors={errors}
     />
   );
 };

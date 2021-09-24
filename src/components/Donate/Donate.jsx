@@ -7,7 +7,15 @@ import { SmallButton } from "../Buttons/SmallButton";
 import cardIcon from "../../assets/cardIcon.svg";
 import cardDateiconsvg from "../../assets/cardDateicon.svg";
 import cvvIcon from "../../assets/cvvIcon.svg";
-import { AuthInputs } from "../Inputs/AuthInputs";
+import {
+  SquarePaymentForm,
+  CreditCardNumberInput,
+  CreditCardExpirationDateInput,
+  CreditCardPostalCodeInput,
+  CreditCardCVVInput,
+  CreditCardSubmitButton,
+} from "react-square-payment-form";
+import "react-square-payment-form/lib/default.css";
 
 const PrettoSlider = withStyles({
   root: {
@@ -57,6 +65,14 @@ export const Donate = ({
   setPaymentMode,
   setOtherAmount,
   otherAmount,
+  cardNonceResponseReceived,
+  setFirstName,
+  FirstName,
+  lastname,
+  setLastname,
+  email,
+  setEmail,
+  errors,
 }) => {
   return (
     <PageContainer>
@@ -149,8 +165,11 @@ export const Donate = ({
                               className={styles.donateInput}
                               value={otherAmount}
                               onChange={(e) => {
+                                if (e.target.value.length >= 10) return;
+
                                 setOtherAmount(e.target.value);
                               }}
+                              maxLength={1}
                             />
                             <p>USD</p>
                           </div>
@@ -199,7 +218,10 @@ export const Donate = ({
                 <div className={styles.amountBox}>
                   <div className={styles.amountHeadingBox}>
                     <p>
-                      You’re giving {donationAmount}{" "}
+                      You’re giving{" "}
+                      {donationAmount === "Other Amount"
+                        ? `$${otherAmount} USD`
+                        : donationAmount}{" "}
                       <span onClick={() => OnDonationSelection(0)}>
                         (edit amount)
                       </span>
@@ -207,7 +229,7 @@ export const Donate = ({
                   </div>
 
                   <div className={styles.modeBox}>
-                    <div className={styles.modeHeadingBox}>
+                    {/* <div className={styles.modeHeadingBox}>
                       <div
                         onClick={() => setPaymentMode(0)}
                         className={
@@ -228,48 +250,104 @@ export const Donate = ({
                       >
                         <p>Paypal</p>
                       </div>
-                    </div>
+                    </div> */}
+
                     <div className={styles.modeGrid2}>
+                      <span class="sq-label">First Name</span>
                       <input
                         placeholder="First name"
                         className={styles.inputName}
+                        value={FirstName}
+                        onChange={(e) => setFirstName(e.target.value)}
                       />
+                    </div>
+                    <div className={styles.modeGrid2}>
+                      <span class="sq-label">Last Name</span>
                       <input
                         placeholder="Last name"
                         className={styles.inputSecondName}
+                        value={lastname}
+                        onChange={(e) => setLastname(e.target.value)}
                       />
                     </div>
                     <div className={styles.modeGrid2}>
-                      <div className={styles.inputBox}>
-                        <div className={styles.cardNumberBox}>
-                          <img className={styles.icon} src={cardIcon} />
-
-                          <input
-                            placeholder="CARD NUMBER"
-                            className={styles.cardInput}
-                          />
-                        </div>
-                        <div className={styles.dateBox}>
-                          <img className={styles.icon} src={cardDateiconsvg} />
-
-                          <input
-                            placeholder="MM / YYYY"
-                            className={styles.dateInput}
-                          />
-                        </div>
-                      </div>
+                      <span class="sq-label">Email</span>
+                      <input
+                        type="email"
+                        placeholder="Email"
+                        className={styles.inputName}
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                      />
                     </div>
-                    <div className={styles.modeGrid2}>
+                    {/* <div className={styles.modeGrid2}>
                       <div className={styles.cvvInput}>
                         <img className={styles.icon} src={cvvIcon} />
 
                         <input placeholder="CVV" />
                       </div>
-                    </div>
+                    </div> */}
 
-                    <div className={styles.sliderHeading}>
+                    {/* <div className={styles.sliderHeading}>
                       <SmallButton classname={styles.button} text={"Donate"} />
-                    </div>
+                    </div> */}
+
+                    <SquarePaymentForm
+                      sandbox={true}
+                      applicationId={"sandbox-sq0idb-0UKNfLQ55CGCy_arO6HsCw"}
+                      locationId={"L1A9FB00MT48T"}
+                      cardNonceResponseReceived={cardNonceResponseReceived}
+                      createVerificationDetails={() => ({
+                        amount:
+                          donationAmount === "Other Amount"
+                            ? otherAmount
+                            : donationAmount,
+                        currencyCode: "USD",
+                        intent: "CHARGE",
+                        billingContact: {
+                          familyName: FirstName,
+                          givenName: lastname,
+                          email: email,
+                          country: "US",
+                          city: "none",
+                          addressLines: ["none"],
+                          postalCode: "none",
+                          phone: "none",
+                        },
+                      })}
+                    >
+                      <fieldset className="sq-fieldset">
+                        <CreditCardNumberInput />
+                        <div style={{ marginTop: "1rem" }} />
+                        <div className="sq-form-third">
+                          <CreditCardExpirationDateInput />
+                        </div>
+
+                        <div className="sq-form-third">
+                          <CreditCardPostalCodeInput />
+                        </div>
+
+                        <div className="sq-form-third">
+                          <CreditCardCVVInput />
+                        </div>
+                      </fieldset>
+
+                      <div className="sq-error-message">
+                        {errors.map((errorMessage) => (
+                          <li key={`sq-error-${errorMessage}`}>
+                            {errorMessage}
+                          </li>
+                        ))}
+                      </div>
+
+                      <CreditCardSubmitButton>
+                        Pay{" "}
+                        {donationAmount === "Other Amount"
+                          ? `$${otherAmount} USD`
+                          : donationAmount}
+                      </CreditCardSubmitButton>
+                    </SquarePaymentForm>
                   </div>
                 </div>
               )}
