@@ -5,26 +5,16 @@ import highlighter2 from "../../assets/highLighter2.svg";
 import weBuyIcon from "../../assets/weBuyIcon.png";
 import resturantIcon from "../../assets/resturantIcon.png";
 import donateIcon from "../../assets/donateIcon.png";
-import { useWindowSize } from "../../hooks/useWindowize";
 import { SmallButton } from "../Buttons/SmallButton";
 import { ComposableMap, Geographies, Geography } from "react-simple-maps";
 import { scaleQuantile } from "d3-scale";
-import { csv } from "d3-fetch";
 import thirdContentStyles from "../Home/ThirdContent/ThirdContent.module.scss";
-import chartData from "../../data/food-insecurity.csv";
+import { insecurityData } from "../../data/foodInsecurities";
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/us-atlas@3/counties-10m.json";
 
 export const FirstContent = () => {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    console.log(chartData);
-    csv(chartData).then((counties) => {
-      console.log(counties);
-      setData(counties);
-    });
-  }, []);
+  const [data, setData] = useState(insecurityData);
 
   const colorScale = scaleQuantile()
     .domain(data.map((d) => d.food))
