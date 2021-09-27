@@ -11,7 +11,7 @@ import { ComposableMap, Geographies, Geography } from "react-simple-maps";
 import { scaleQuantile } from "d3-scale";
 import { csv } from "d3-fetch";
 import thirdContentStyles from "../Home/ThirdContent/ThirdContent.module.scss";
-import chartData from "../../data/counties-data-insecurity.csv";
+import chartData from "../../data/food-insecurity.csv";
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/us-atlas@3/counties-10m.json";
 
