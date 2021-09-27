@@ -19,6 +19,7 @@ export const FirstContent = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
+    console.log(chartData);
     csv(chartData).then((counties) => {
       console.log(counties);
       setData(counties);
