@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { Donate } from "../../components/Donate/Donate";
 import validator from "validator";
+import { useDispatch } from "react-redux";
+import * as actions from "../../Redux/Actions/DonationActions";
 
 export const DonatePage = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const [selector, setSelector] = useState(0);
   const [donationAmount, setDonationAmount] = useState("");
   const [distrubition, setDistrubition] = useState(50);
@@ -62,12 +65,23 @@ export const DonatePage = () => {
 
     seterrors([]);
 
-    alert(
-      "nonce created: " +
-        nonce +
-        ", buyerVerificationToken: " +
-        buyerVerificationToken
-    );
+    setIsLoading(true);
+
+    actions
+      .attemptCharge({
+        nonce,
+        amount:
+          donationAmount === "Other Amount"
+            ? otherAmount
+            : donationAmount.replace("USD", "").replace("$", "").trim(),
+        buyerVerificationToken,
+      })
+      .then(() => {
+        setIsLoading(false);
+      })
+      .catch(() => {
+        setIsLoading(false);
+      });
   };
 
   return (
@@ -93,6 +107,7 @@ export const DonatePage = () => {
       email={email}
       setEmail={setEmail}
       errors={errors}
+      isLoading={isLoading}
     />
   );
 };

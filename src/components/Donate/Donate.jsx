@@ -4,9 +4,6 @@ import styles from "./Donate.module.scss";
 import { withStyles } from "@material-ui/core/styles";
 import Slider from "@material-ui/core/Slider";
 import { SmallButton } from "../Buttons/SmallButton";
-import cardIcon from "../../assets/cardIcon.svg";
-import cardDateiconsvg from "../../assets/cardDateicon.svg";
-import cvvIcon from "../../assets/cvvIcon.svg";
 import {
   SquarePaymentForm,
   CreditCardNumberInput,
@@ -16,6 +13,7 @@ import {
   CreditCardSubmitButton,
 } from "react-square-payment-form";
 import "react-square-payment-form/lib/default.css";
+import ReactLoading from "react-loading";
 
 const PrettoSlider = withStyles({
   root: {
@@ -73,6 +71,7 @@ export const Donate = ({
   email,
   setEmail,
   errors,
+  isLoading,
 }) => {
   return (
     <PageContainer>
@@ -295,8 +294,8 @@ export const Donate = ({
 
                     <SquarePaymentForm
                       sandbox={true}
-                      applicationId={"sandbox-sq0idb-0UKNfLQ55CGCy_arO6HsCw"}
-                      locationId={"L1A9FB00MT48T"}
+                      applicationId={"sandbox-sq0idb-_adwGVNpwy2pHA3rZfcWkA"}
+                      locationId={"LRHKKNDRF3QRV"}
                       cardNonceResponseReceived={cardNonceResponseReceived}
                       createVerificationDetails={() => ({
                         amount:
@@ -341,12 +340,23 @@ export const Donate = ({
                         ))}
                       </div>
 
-                      <CreditCardSubmitButton>
-                        Pay{" "}
-                        {donationAmount === "Other Amount"
-                          ? `$${otherAmount} USD`
-                          : donationAmount}
-                      </CreditCardSubmitButton>
+                      {isLoading ? (
+                        <div className={styles.loadingBox}>
+                          <ReactLoading
+                            type={"spin"}
+                            color={"#6b38fb"}
+                            height={50}
+                            width={50}
+                          />
+                        </div>
+                      ) : (
+                        <CreditCardSubmitButton>
+                          Pay{" "}
+                          {donationAmount === "Other Amount"
+                            ? `$${otherAmount} USD`
+                            : donationAmount}
+                        </CreditCardSubmitButton>
+                      )}
                     </SquarePaymentForm>
                   </div>
                 </div>
