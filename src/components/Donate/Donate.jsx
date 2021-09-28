@@ -14,6 +14,11 @@ import {
 } from "react-square-payment-form";
 import "react-square-payment-form/lib/default.css";
 import ReactLoading from "react-loading";
+import { APPLICATION_ID, LOCATION_ID, SANDBOX } from "../../hooks/config";
+import Modal from "@material-ui/core/Modal";
+import Backdrop from "@material-ui/core/Backdrop";
+import checked from "../../assets/checked.png";
+import Box from "@material-ui/core/Box";
 
 const PrettoSlider = withStyles({
   root: {
@@ -50,6 +55,22 @@ const PrettoSlider = withStyles({
   },
 })(Slider);
 
+const modalstyle = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+};
+
 export const Donate = ({
   selector,
   setSelector,
@@ -72,6 +93,8 @@ export const Donate = ({
   setEmail,
   errors,
   isLoading,
+  isModalOpen,
+  closeModal,
 }) => {
   return (
     <PageContainer>
@@ -293,9 +316,9 @@ export const Donate = ({
                     </div> */}
 
                     <SquarePaymentForm
-                      sandbox={true}
-                      applicationId={"sandbox-sq0idb-_adwGVNpwy2pHA3rZfcWkA"}
-                      locationId={"LRHKKNDRF3QRV"}
+                      sandbox={SANDBOX}
+                      applicationId={APPLICATION_ID}
+                      locationId={LOCATION_ID}
                       cardNonceResponseReceived={cardNonceResponseReceived}
                       createVerificationDetails={() => ({
                         amount:
@@ -378,6 +401,29 @@ export const Donate = ({
           </div>
         </div>
       </div>
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        open={isModalOpen}
+        onClose={closeModal}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Box sx={modalstyle}>
+          <img src={checked} />
+
+          <p className={styles.modalHeading}>Thank you for the donation!</p>
+
+          <SmallButton
+            onClick={closeModal}
+            text={"Continue"}
+            classname={styles.modalbutton}
+          />
+        </Box>
+      </Modal>
     </PageContainer>
   );
 };

@@ -12,6 +12,7 @@ export const DonatePage = () => {
   const [tab, setTab] = useState(0);
   const [paymentMode, setPaymentMode] = useState(0);
   const [otherAmount, setOtherAmount] = useState("");
+  const [isModalopen, setisModalopen] = useState(false);
   // data
   const [FirstName, setFirstName] = useState("");
   const [lastname, setLastname] = useState("");
@@ -78,9 +79,17 @@ export const DonatePage = () => {
       })
       .then(() => {
         setIsLoading(false);
+        setisModalopen(true);
       })
-      .catch(() => {
+      .catch((e) => {
         setIsLoading(false);
+        seterrors(
+          e.map((error) =>
+            error.detail.includes("PAN_FAILURE")
+              ? "Invalid credit card details"
+              : error.detail
+          )
+        );
       });
   };
 
@@ -108,6 +117,11 @@ export const DonatePage = () => {
       setEmail={setEmail}
       errors={errors}
       isLoading={isLoading}
+      isModalOpen={isModalopen}
+      closeModal={() => {
+        setisModalopen(false);
+        setTab(0);
+      }}
     />
   );
 };

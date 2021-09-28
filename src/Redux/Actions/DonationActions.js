@@ -1,5 +1,5 @@
 import axios from "axios";
-import { LOCATION_ID } from "../../hooks/config";
+import { ACCESS_TOKEN, LOCATION_ID } from "../../hooks/config";
 import { v4 as uuidv4 } from "uuid";
 
 export const attemptCharge = ({ nonce, buyerVerificationToken, amount }) =>
@@ -20,8 +20,8 @@ export const attemptCharge = ({ nonce, buyerVerificationToken, amount }) =>
         },
         {
           headers: {
-            Authorization:
-              "Bearer EAAAEDZGCM_ehmMZbJPB9wuBB_KNM5sl3tX4sCTWbKODqjPxcZGfsNEx2vzoB5Fa",
+            Authorization: `Bearer ${ACCESS_TOKEN}`,
+            "Content-Type": "application/json",
           },
         }
       )
@@ -31,7 +31,11 @@ export const attemptCharge = ({ nonce, buyerVerificationToken, amount }) =>
         resolve();
       })
       .catch((e) => {
-        console.log(e);
-        reject();
+        console.log(e.response);
+        reject(
+          e.response.data === ""
+            ? [{ detail: "Some error occoured, please try again later" }]
+            : e.response.data.errors
+        );
       });
   });
