@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 export const attemptCharge = ({ nonce, buyerVerificationToken, amount }) =>
   new Promise((resolve, reject) => {
     axios
-      .get(
+      .post(
         "/payments",
         {
           source_id: nonce,
