@@ -6,7 +6,7 @@ export const attemptCharge = ({ nonce, buyerVerificationToken, amount }) =>
   new Promise((resolve, reject) => {
     axios
       .post(
-        "https://connect.squareupsandbox.com/v2/payments",
+        "/payments",
         {
           source_id: nonce,
           verification_token: buyerVerificationToken,
@@ -22,6 +22,7 @@ export const attemptCharge = ({ nonce, buyerVerificationToken, amount }) =>
           headers: {
             Authorization: `Bearer ${ACCESS_TOKEN}`,
             "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
           },
         }
       )
