@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 export const attemptCharge = ({ nonce, buyerVerificationToken, amount }) =>
   new Promise((resolve, reject) => {
     axios
-      .get(
+      .post(
         "/dev/attempt_charge",
         JSON.stringify({
           SquareAPI: {
@@ -13,14 +13,14 @@ export const attemptCharge = ({ nonce, buyerVerificationToken, amount }) =>
           },
           DonationAmount: { label: `${amount * 100}`, amount: amount * 100 },
           DonationCurrency: "USD",
-        }),
-        {
-          headers: {
-            Authorization: `Bearer ${ACCESS_TOKEN}`,
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
-          },
-        }
+        })
+        // {
+        //   headers: {
+        //     Authorization: `Bearer ${ACCESS_TOKEN}`,
+        //     "Content-Type": "application/json",
+        //     "Access-Control-Allow-Origin": "*",
+        //   },
+        // }
       )
       .then((res) => {
         console.log("sucess");
