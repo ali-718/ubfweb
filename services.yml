@@ -1,0 +1,12 @@
+cors.config:
+enabled: true
+allowedHeaders:
+  - "*"
+allowedMethods:
+  - "*"
+allowedOrigins:
+  # Note: you need to specify the host + port where your app will run.
+  - localhost:3000
+exposedHeaders: false
+maxAge: false
+supportsCredentials: false
