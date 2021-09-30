@@ -6,7 +6,7 @@ export const attemptCharge = ({ nonce, buyerVerificationToken, amount }) =>
   new Promise((resolve, reject) => {
     axios
       .post(
-        "/dev/attempt_charge",
+        "https://2wnjzo1dcd.execute-api.us-east-1.amazonaws.com/dev/attempt_charge",
         JSON.stringify({
           SquareAPI: {
             nonce,
