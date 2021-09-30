@@ -6,17 +6,13 @@ export const attemptCharge = ({ nonce, buyerVerificationToken, amount }) =>
   new Promise((resolve, reject) => {
     axios
       .post(
-        "/payments",
+        "/dev/attempt_charge",
         {
-          source_id: nonce,
-          verification_token: buyerVerificationToken,
-          autocomplete: true,
-          location_id: LOCATION_ID,
-          amount_money: {
-            amount: amount * 100,
-            currency: "USD",
+          SquareAPI: {
+            nonce,
           },
-          idempotency_key: `#${uuidv4()}`,
+          DonationAmount: { label: `${amount * 100}`, amount: amount * 100 },
+          DonationCurrency: "USD",
         },
         {
           headers: {
