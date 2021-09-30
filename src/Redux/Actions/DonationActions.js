@@ -7,13 +7,13 @@ export const attemptCharge = ({ nonce, buyerVerificationToken, amount }) =>
     axios
       .post(
         "/dev/attempt_charge",
-        {
+        JSON.stringify({
           SquareAPI: {
             nonce,
           },
           DonationAmount: { label: `${amount * 100}`, amount: amount * 100 },
           DonationCurrency: "USD",
-        },
+        }),
         {
           headers: {
             Authorization: `Bearer ${ACCESS_TOKEN}`,
