@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 export const attemptCharge = ({ nonce, buyerVerificationToken, amount }) =>
   new Promise((resolve, reject) => {
     axios
-      .post(
+      .get(
         "/dev/attempt_charge",
         JSON.stringify({
           SquareAPI: {
