@@ -11,16 +11,18 @@ export const attemptCharge = ({ nonce, buyerVerificationToken, amount }) =>
           SquareAPI: {
             nonce,
           },
-          DonationAmount: { label: `${amount * 100}`, amount: amount * 100 },
+          DonationAmount: { label: `${amount}`, amount: parseInt(amount) },
           DonationCurrency: "USD",
-        })
-        // {
-        //   headers: {
-        //     Authorization: `Bearer ${ACCESS_TOKEN}`,
-        //     "Content-Type": "application/json",
-        //     "Access-Control-Allow-Origin": "*",
-        //   },
-        // }
+        }),
+        {
+          headers: {
+            // Authorization: `Bearer ${ACCESS_TOKEN}`,
+            // "Content-Type": "application/json",
+            "Access-Control-Allow-Headers": "Content-Type",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "OPTIONS,POST,GET",
+          },
+        }
       )
       .then((res) => {
         console.log("sucess");
