@@ -356,9 +356,15 @@
   margin-top: -2.1rem;
   display: flex;
 
-  p {
+  p:nth-child(odd) {
     font-size: 0.9rem;
     color: var(--PRIMARY-COLOR);
+    font-weight: 400;
+  }
+
+  p:nth-child(even) {
+    font-size: 0.9rem;
+    color: var(--GRAY-COLOR);
     font-weight: 400;
   }
 }
