@@ -10,6 +10,8 @@ import { ComposableMap, Geographies, Geography } from "react-simple-maps";
 import { scaleQuantile } from "d3-scale";
 import thirdContentStyles from "../Home/ThirdContent/ThirdContent.module.scss";
 import { insecurityData } from "../../data/foodInsecurities";
+import { DONATE } from "../../routesMap";
+import { Link } from "react-router-dom";
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/us-atlas@3/counties-10m.json";
 
@@ -41,7 +43,9 @@ export const FirstContent = () => {
           <div className={styles.headingThree}>
             <div className={styles.stateInputBox}>
               <div className={styles.inputButtonBox}>
-                <SmallButton text={"Donate"} classname={styles.button} />
+                <Link style={{ textDecoration: "none" }} to={DONATE}>
+                  <SmallButton text={"Donate"} classname={styles.button} />
+                </Link>
               </div>
               <input placeholder="Feed African American women in Essex County, NJ" />
             </div>
