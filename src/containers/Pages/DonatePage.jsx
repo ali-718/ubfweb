@@ -66,16 +66,23 @@ export const DonatePage = () => {
 
     seterrors([]);
 
-    setIsLoading(true);
+    setIsLoading(false);
+
+    console.log(nonce, buyerVerificationToken);
 
     actions
       .attemptCharge({
         nonce,
+        buyerVerificationToken,
         amount:
           donationAmount === "Other Amount"
-            ? otherAmount
-            : donationAmount.replace("USD", "").replace("$", "").trim(),
-        buyerVerificationToken,
+            ? otherAmount.replace("$", "").replace("USD", "").trim()
+            : donationAmount.replace("$", "").replace("USD", "").trim(),
+        cause_distribution: distrubition,
+        overhead_distribution: 100 - distrubition,
+        first_name: FirstName,
+        last_name: lastname,
+        email,
       })
       .then(() => {
         setIsLoading(false);
