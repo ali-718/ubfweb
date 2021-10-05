@@ -66,9 +66,7 @@ export const DonatePage = () => {
 
     seterrors([]);
 
-    setIsLoading(false);
-
-    console.log(nonce, buyerVerificationToken);
+    setIsLoading(true);
 
     actions
       .attemptCharge({

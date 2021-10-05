@@ -12,16 +12,6 @@ export const attemptCharge = ({
   email,
 }) =>
   new Promise((resolve, reject) => {
-    console.log({
-      nonce,
-      buyerVerificationToken,
-      amount: parseInt(amount),
-      cause_distribution,
-      overhead_distribution,
-      first_name,
-      last_name,
-      email,
-    });
     axios
       .post(
         "https://49e1wa11jc.execute-api.us-east-1.amazonaws.com/dev/donation",
@@ -38,12 +28,9 @@ export const attemptCharge = ({
         }
       )
       .then((res) => {
-        console.log("sucess");
-        console.log(res.data);
         resolve();
       })
       .catch((e) => {
-        console.log(e.response);
         reject(
           e.response.data === ""
             ? [{ detail: "Some error occoured, please try again later" }]
