@@ -25,7 +25,7 @@ export const attemptCharge = ({
     axios
       .post(
         "https://49e1wa11jc.execute-api.us-east-1.amazonaws.com/dev/donation",
-        JSON.stringify({
+        {
           nonce,
           verification_token: buyerVerificationToken,
           amount: parseInt(amount),
@@ -35,15 +35,6 @@ export const attemptCharge = ({
           first_name: first_name,
           last_name: last_name,
           email: email,
-        }),
-        {
-          headers: {
-            // Authorization: `Bearer ${ACCESS_TOKEN}`,
-            // "Content-Type": "application/json",
-            "Access-Control-Allow-Headers": "Content-Type",
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "OPTIONS,POST,GET",
-          },
         }
       )
       .then((res) => {
