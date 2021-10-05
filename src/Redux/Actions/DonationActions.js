@@ -34,7 +34,7 @@ export const attemptCharge = ({
         reject(
           e.response.data === ""
             ? [{ detail: "Some error occoured, please try again later" }]
-            : e.response.data.errors
+            : [{ detail: e.response.data.err.message }]
         );
       });
   });
